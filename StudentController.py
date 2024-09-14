@@ -29,7 +29,7 @@ def get_student(student_id):
 
 @app.route('/delete_student/<int:student_id>', methods=['DELETE'])
 def delete_student(student_id):
-    service.delete_user(student_id)
+    service.delete_student(student_id)
     return jsonify({'message': 'student deleted successfully', 'id': student_id})
 
 @app.route('/update_student/<int:student_id>', methods=['PUT'])
