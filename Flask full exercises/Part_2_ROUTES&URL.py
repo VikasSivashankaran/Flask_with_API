@@ -1,6 +1,4 @@
-from Tools.scripts.make_ctype import method
-from flask import Flask, request
-
+from flask import Flask, request, make_response
 app = Flask(__name__)
 
 @app.route('/')
@@ -9,7 +7,26 @@ def hello():
 
 @app.route('/vikas', methods = ['GET', 'POST'])
 def vikas():
-    return "Hello World!"
+    if request.method == 'GET':
+        return "You made GET request\n"
+    elif request.method == 'POST':
+        return "You made POST request\n"
+    else:
+        return "You will never see this message\n"
+
+@app.route('/hello')
+def helloo():                    #to see status response open cmd and type "curl -I http://localhost:portno/hello"
+    #return 'hello\n' , 200       #change the number according to the response you want
+    response = make_response()
+    response.status_code = 202
+    response.headers['content-type'] = 'application/octet-stream'
+    return response
+
+#200 - status OK
+#201 - status created
+#202 - status Accepted
+#404 - status not found
+
 
 @app.route('/greet/<name>')          #passing variable in browser "http://127.0.0.1:portno/greet/your name"
 def greet(name):
