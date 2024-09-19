@@ -18,8 +18,8 @@ def vikas():
 def helloo():                    #to see status response open cmd and type "curl -I http://localhost:portno/hello"
     #return 'hello\n' , 200       #change the number according to the response you want
     response = make_response()
-    response.status_code = 202
-    response.headers['content-type'] = 'application/octet-stream'
+    response.status_code = 404
+    response.headers['content-type'] = 'Abhishek/abhi'
     return response
 
 #200 - status OK
