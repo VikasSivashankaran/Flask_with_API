@@ -4,6 +4,8 @@ Open terminal and create virtual environment file which posses with that particu
 
 open terminal --> "python -m venv .venv",
 
+.venv/Scripts/activate
+
 "pip freeze"
 
 "pip install flask"
