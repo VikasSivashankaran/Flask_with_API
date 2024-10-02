@@ -10,3 +10,11 @@ This repository contains exercises and examples for learning Flask.
 4. [Part 4 - Forms,Post and files](#Part-4---Forms-Post-and-files)
 
 ---
+
+
+
+YOU CAN FIND ANOTHER DIRECTORY "Flask_Web_App_with_Heroku"
+
+flask is intergrated whith heroku free cloud deployment
+
+click the directory to know more!!
